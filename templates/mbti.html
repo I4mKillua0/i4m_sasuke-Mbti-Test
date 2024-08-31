@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Ready?</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mbti.css') }}">
+</head>
+<body>
+    
+    <div id="response-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="intro-text">کەسایەتی تۆ بریتیە لە :</p>
+            <p id="modal-message">Server response will be displayed here.</p>
+            <p id="intro-text">ئەم دوگمەی خوارەوە دابگرە بۆ زیاتر زانیاری لەسەر کەسایەتیت لەناو سایتی<br> 16 personallity</p>
+
+            <button id="full-view-btn" style="display: none;">زانیاری زیاتر لەسەر کەسایەتیت</button>
+        </div>
+    </div>
+
+    <div class="top-footer">
+        <div class="supporters">
+            <h3>Supporter With Translating</h3>
+            <span>
+                رێز و سوپاس بۆ هاوکارم لەگەڵم هیلاک بوو بە وەرگێرانی پرسیارەکان وەک یارمەتیەک فۆڵۆوی بکەن
+            </span>
+            <span>Lady Mbti <a href="https://www.tiktok.com/@mbti_3100"><img src="https://clipartcraft.com/images/tiktok-logo-app-1.png" alt="TikTok" class="icon"></a></span>
+        </div>
+        <div class="creator">
+            <div>خاوەنی وێبسایت : i4m_sasuke</div>
+            <div class="social-media">
+                <a href="https://www.snapchat.com/add/i4m_sasuke">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/800px-Snapchat_logo.svg.png" alt="Snapchat" class="icon">
+                </a>
+                <a href="https://www.tiktok.com/@i4m_sasuke">
+                    <img src="https://clipartcraft.com/images/tiktok-logo-app-1.png" alt="TikTok" class="icon">
+                </a>
+                <a href="https://telegram.me/i4m_sasuke">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="icon">
+                </a>
+                <a href="https://www.instagram.com/i4m_sasuke">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <h1>بە ناوی خودای گەورەو میهرەبان</h1>
+        <p>زۆر سوپاسی خودا دەکەم یارمەتیدەرم بوە بەوەی لە ماوەی ٢ رۆژ ئەم وێبسایتە دروست بکەم الحمدللە تەواومان کرد</p>
+        <p>بیرۆکەی ئەو وێبسایتە بۆ ئەوەیە کە با بەس بێت لە بەکار هێنانی وێبسایتی بیانی و وێبسایتیکی کوردی بەکار بهێنین بەبێ بەکار هێنانی ترانسلەیت وەڵامی پرسیارەکان ئەم تاقیکردنەوەیە بدەینەوە</p>
+        <p>گەنجی کورد گەر پاڵپشتیان هەبێ شتی زۆر جوان پێشکەش دەکەن بە دڵنیاییەوە ، لێرەوە سوپاس بۆ خاوەن ئەکاونتی تیکتۆکی (lady mbti) بەراستی هیلاک بوو تاکە سەپۆرتەرم بوو لەو ماوەیە لەگەڵما پرسیارەکان بە شێوەیەکی باش پوخت بکەینەوە </p>
+        <p>دلنیابە کە ئەو تێستە دەکەیت بە راست و دروستی وەڵامیان دەدەیتەوە وە لە کاتێکدا تێستەکە بکە کە ئارام بیت نە زۆر دڵ خۆش بیت نە زۆر خەمبار ئەگەرنا کاریگەری دروست دەکات لەسەر وەڵامەکانتان، لە هەبونی کێشە نامە بنێرن سۆشیاڵ میدیاکانم داناوە</p>
+        <h2>رێنمایی چۆنیەتی وەڵامدانەوەکان : </h2>
+        <p>وەک دەبینن هەر پرسیارێک ٧ وەڵام دانەوەی هەیە با رونی بکەینەوە بۆ چیە ، بۆیە وەڵامەکان زۆرن لەبەر رێژەییە واتا نمونە کە دەپرسێت هاوڕێ  بە ئاسانی دروست دەکەیت</p>
+        <p>ئایە ئەو پرسیارە لەسەر تۆ پشتراست دەبێتەوە ، ئەگەر دەڵێیت نەخێر ٣ رێژەت هەیە کە ئایە تۆ  تەنیا رەتی دەکەیتەوە هاورێ بە ئاسانی دروست بکەیت یاخود رێژەی بەرزتر کە تۆ زیاتر لە ئاسایی رەتی دەکەیتەوە یاخود ڕێژە بەرزەکە کە بە هەموو شێوەیەک ڕەتی دەکەیتەوە بە هەمان شێوە بۆ لای رازی بوونیش بەم شێوەیەیە ٣ دانە رازی بون ٣ دانا رازی نەبون وەڵامی رەساسی ناوەراست بە مانای دڵنیا نیم لە وەڵامدانەوەی ئەو پرسیارە </p>
+        <p>بە هیوای کاتێکی خۆش لەگەل پرسیارەکان بەسەر ببەیت </p>
+    </div>
+
+    <div class="container">
+        <div id="questions-container"></div>
+        
+        <div class="gender-selection">
+            <label for="gender">رەگەز:</label>
+            <select id="gender" name="gender">
+                <option value="Male">نێر</option>
+                <option value="Female">مێ</option>
+                <option value="Other">هیچیسن</option>
+            </select>
+        </div>
+        
+        <button class="submit-btn" onclick="submitAnswer()">دۆزینەوەی کەسایەتیت</button>
+    </div>
+
+    <footer>
+        <div class="supporters">
+            <h3>Supporter With Translating</h3>
+            <span>
+                رێز و سوپاس بۆ هاوکارم لەگەڵم هیلاک بوو بە وەرگێرانی پرسیارەکان وەک یارمەتیەک فۆڵۆوی بکەن
+            </span>
+            <span>Lady Mbti <a href="https://www.tiktok.com/@mbti_3100"><img src="https://clipartcraft.com/images/tiktok-logo-app-1.png" alt="TikTok" class="icon"></a></span>
+        </div>
+        <div class="creator">
+            <div>خاوەنی وێبسایت : i4m_sasuke</div>
+            <div class="social-media">
+                <a href="https://www.snapchat.com/add/i4m_sasuke">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Snapchat_logo.svg/800px-Snapchat_logo.svg.png" alt="Snapchat" class="icon">
+                </a>
+                <a href="https://www.tiktok.com/@i4m_sasuke">
+                    <img src="https://clipartcraft.com/images/tiktok-logo-app-1.png" alt="TikTok" class="icon">
+                </a>
+                <a href="https://telegram.me/i4m_sasuke">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="icon">
+                </a>
+                <a href="https://www.instagram.com/i4m_sasuke">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const originalQuestions = [
+            'You regularly make new friends.',
+            'Complex and novel ideas excite you more than simple and straightforward ones.',
+            'You usually feel more persuaded by what resonates emotionally with you than by factual arguments.',
+            'Your living and working spaces are clean and organized.',
+            'You usually stay calm, even under a lot of pressure.',
+            'You find the idea of networking or promoting yourself to strangers very daunting.',
+            'You prioritize and plan tasks effectively, often completing them well before the deadline.',
+            'People’s stories and emotions speak louder to you than numbers or data.',
+            'You like to use organizing tools like schedules and lists.',
+            'Even a small mistake can cause you to doubt your overall abilities and knowledge.',
+            'You feel comfortable just walking up to someone you find interesting and striking up a conversation.',
+            'You are not too interested in discussions about various interpretations of creative works.',
+            'You prioritize facts over people’s feelings when determining a course of action.',
+            'You often allow the day to unfold without any schedule at all.',
+            'You rarely worry about whether you make a good impression on people you meet.',
+            'You enjoy participating in team-based activities.',
+            'You enjoy experimenting with new and untested approaches.',
+            'You prioritize being sensitive over being completely honest.',
+            'You actively seek out new experiences and knowledge areas to explore.',
+            'You are prone to worrying that things will take a turn for the worse.',
+            'You enjoy solitary hobbies or activities more than group ones.',
+            'You cannot imagine yourself writing fictional stories for a living.',
+            'You favor efficiency in decisions, even if it means disregarding some emotional aspects.',
+            'You prefer to do your chores before allowing yourself to relax.',
+            'In disagreements, you prioritize proving your point over preserving the feelings of others.',
+            'You usually wait for others to introduce themselves first at social gatherings.',
+            'Your mood can change very quickly.',
+            'You are not easily swayed by emotional arguments.',
+            'You often end up doing things at the last possible moment.',
+            'You enjoy debating ethical dilemmas.',
+            'You usually prefer to be around others rather than on your own.',
+            'You become bored or lose interest when the discussion gets highly theoretical.',
+            'When facts and feelings conflict, you usually find yourself following your heart.',
+            'You find it challenging to maintain a consistent work or study schedule.',
+            'You rarely second-guess the choices that you have made.',
+            'Your friends would describe you as lively and outgoing.',
+            'You are drawn to various forms of creative expression, such as writing.',
+            'You usually base your choices on objective facts rather than emotional impressions.',
+            'You like to have a to-do list for each day.',
+            'You rarely feel insecure.',
+            'You avoid making phone calls.',
+            'You enjoy exploring unfamiliar ideas and viewpoints.',
+            'You can easily connect with people you have just met.',
+            'If your plans are interrupted, your top priority is to get back on track as soon as possible.',
+            'You are still bothered by mistakes that you made a long time ago.',
+            'You are not too interested in discussing theories on what the world could look like in the future.',
+            'Your emotions control you more than you control them.',
+            'When making decisions, you focus more on how the affected people might feel than on what is most logical or efficient.',
+            'Your personal work style is closer to spontaneous bursts of energy than organized and consistent efforts.',
+            'When someone thinks highly of you, you wonder how long it will take them to feel disappointed in you.',
+            'You would love a job that requires you to work alone most of the time.',
+            'You believe that pondering abstract philosophical questions is a waste of time.',
+            'You feel more drawn to busy, bustling atmospheres than to quiet, intimate places.',
+            'If a decision feels right to you, you often act on it without needing further proof.',
+            'You often feel overwhelmed.',
+            'You complete things methodically without skipping over any steps.',
+            'You prefer tasks that require you to come up with creative solutions rather than follow concrete steps.',
+            'You are more likely to rely on emotional intuition than logical reasoning when making a choice.',
+            'You struggle with deadlines.',
+            'You feel confident that things will work out for you.'
+        ];
+    
+        const translations = [
+    'تۆ بە ئاسانی هاورێی نوێ دروست دەکەیت',
+    'ئایا زیاتر ئارەزووت بە بیرۆکەی نوێ و ئاڵۆز هەیە وەک لە بیرۆکەی سادە و ئاسان؟',
+    'لە بڕیارەکان پشت بە هەستەکانت دەبەستیت زیاتر لە (قسەی راستەقینە بەڵام لەوانەیە بە ئازار بێت) (قسە ڕاستە ئازار بەخشەکان)',
+    'ئەو ژینگەی دەوروبەرەی لێی دەژیت پاک خاوێن و رێکخراوە؟',
+    'تۆ ئارامی لە ژێر فشاری زۆردا',
+    'ناسینی کەسانی نوێ و باسکردنی خۆت بۆیان بە خراپ دادەنێیت؟',
+    'ئەرکەکانت بە باشی ڕێکدەخەیت و پلانی بۆ دادەنێیت وە لە پێش کاتی دیاریکراو تەواویان دەکەیت؟',
+    'زیاتر حەز دەکەیت گوێ لە چیرۆک و هەستی خەڵک بگریت لەوەی بەدوای زانیاری و ڕاستی بکەویت؟',
+    'ئایا حەزت بە بەکارهێنانی ئامرازەکانی وەک خشتە و لیست هەیە؟',
+    'تەنانەت هەڵەیەکی بچووکیش دەتوانێ وات لێبکات گومان لە توانا و زانیاریەکانت هەبێت',
+    'هەست بە ئاسودەی ئەکەیت کە بچیتە لای ئەو کەسەی بە ژیری دەزانیت و گفتوگۆی لەگەڵبکەیت؟',
+    'تۆ حەزت بە باسکردنی بەرهەمە داهێنەر و فکریەکان نییە',
+    'لە کاتی کارکردن ڕاستیە ناخۆشەکان لە پێش هەستەکانی خەڵک دادەنێیت',
+    'زۆرجار ڕۆژەکەت بەبێ هیچ خشتەیەکی ڕۆژانە بەڕێدەکەیت',
+    'بە دەگمەن نیگەران دەبیت لەوەی کە ئایا کاریگەرییەکی باش لەسەر ئەو کەسانە دروست دەکەیت کە چاویان پێت دەکەوێت',
+    'ئایا چێژ لە بەشداریکردن لەو چالاکییانەدا دەبینیت کە پێویستیان بە کاری هەرەوەزی و هاوکاری لەگەڵ کەسانی دیکە هەیە؟',
+    'چێژ لە تاقیکرنەوەکان وەردەگریت بە شێوازێکی نوێ و سەردەمیانە',
+    'تۆ بەلاتەوە گرنگە بە هەستەوە لەگەڵ کەسێک قسە بکەیت نەک بە شێوەیەکی ڕاکشاوانە',
+    'چێژ دەبینی لە ئەزموون کردنی نوێ لە بابەتە جیاوازەکان و لێکۆڵینەوەیان',
+    'ئایا زۆرجار نیگەرانی ئەوە دەبیت کە دۆخەکان بە هەڵەدا بچن یان سەختتر بن؟',
+    'زیاتر حەز دەکەیت چالاکییەکانت بە تەنیا ئەنجام بدەیت وەک ئەوەی بە کۆمەڵ بیکەن',
+    'دەتوانی وێنای خۆت بکەیت پارە لە رێگەی نوسینی چیرۆک کۆبکەیتەوە',
+    'تەنانەت ئەگەر بە مانای پشتگوێخستنی هەندێک لایەنی سۆزداریش بێت تۆ لەگەڵ ژیری بڕیاردانەکەتیت',
+    'پێت باشە پێشئەوەی پشوو بدەیت کارەکانت ئەنجام بدەیت',
+    'لە ناخۆشیدا سەلماندنی ئامانجەکەت لە پێشینەی کارەکەتە نەک هەستی کەسانی دیکە',
+    'لە بۆنە کۆمەڵایەتیەکان چاوەرێی کەسانی تر دەکەیت کە سەرەتا خۆیان بناسێنن',
+    'باری دەروونیت زۆر بە خێرایی دەگۆڕێت؟',
+    'ئایا زۆرجار سۆزداری و موناقەشە کاریگەریان هەیە لەسەرت',
+    'زۆرجار لە کۆتا ساتدا ئەرکەکان ئەنجام دەدەیت.',
+    'تۆ چێژ لە مشتومڕکردن لەسەر بابەتی ئەدەبی وەردەگریت',
+    'بەزۆری حەز دەکەیت لە دەوری کەسانی تر بیت نەک بە تەنیا',
+    'بە ئاسانی بێزاردەبیت لە بابەتی تیۆری (جۆرێکە کە لایەنی پراکتیکی تێدا نیە واتا بابەتێک باس دەکات بەڵام کرداری تێدا نابێت)',
+    'تۆ دوای ویستی دڵت دەکەویت نەوەک مێشکت',
+    'ئایا بۆ تۆ قورسە خشتەی کارکردن یان خوێندنی ڕێکوپێکت هەبێت؟',
+    'بە دەگمەن بیر لەو هەڵبژاردنانە دەکەیتەوە کە کردووتە کە هەڵە بووە یاخود راست بووە (نموونە: کاتێک ڕووبەڕووی هەڵبژاردنێکی قورس دەبیتەوە کە ٢ رێگەت لەبەردەمە و تۆ دانەیەکیان هەڵدەبژێرنیت دوای هەڵبژاردنەکە تۆ بە دەگمەن بیر ناکەیتەوە هەڵبژاردنەکەت راست بووە یاخود هەڵە، ئەگەر زۆر بیری دەکەیتەوە رازی نەبوون هەڵبژێرە وە ئەگەر بیری لێناکەیتەوە رازی بوون هەڵبژێرە بەپێی رێژەکە)',
+    'ئایا هاوڕێکانت تۆ وەک کەسێک دەبینن کە دۆستانە و حەزی لە ناسینی کەسانی نوێ بێت؟',
+    'ئایا خۆشی لە چالاکییە داهێنەرەکانی وەک یەکێک لە (نووسین، نیگارکێشان، یان ژەنینی مۆسیقادا) دەبینیت؟',
+    'ئایا زیاتر لەسەر بنەمای ڕاستییەکان بڕیار دەدەیت لەوەی بنەمای هەست؟',
+    'حەز دەکەیت لیستی ئەنجامدانی ئەرکەکەت هەبێت بۆ هەموو ڕۆژێک.',
+    'ئایا هەست بە متمانە و دڵنیای دەکەیت بەبەردەوامی',
+    'خۆت بەدوور دەگریت لە پەیوەندی تەلەفۆنی',
+    'تۆ چێژ لە بیرۆکەی نوێ و جیاواز وەردەگریت',
+    'ئایا بە ئاسانی تێکەڵی ئەو کەسانە دەبیت کە تازە ناسیوتن',
+    'ئەگەر پلانەکان تێکچون یەکەم هەنگاوی تۆ ئەوەیە بگەڕێیتەوە سەر ڕێڕەوی پلانەکەی خۆت',
+    'ئایا هەڵە کۆنەکان هێشتا شەرمەزارت دەکەن؟',
+    'چێژ لە باسکردنی ئێستا وەردەگریت وەک لە خەیاڵ کردنی داهاتوو',
+    'هەستەکانت زیاتر کۆنتڕۆڵت دەکەن لەوەی کە کۆنتڕۆڵیان بکەیت',
+    'لە بڕیارەکانت بیر لە هەستی کەسانی تر دەکەیتەوە؟',
+    'شێوازی کاری تۆ بە شێوەیەکی بەردەوام و ڕێکخراو نییە',
+    'ئایا زۆرجار نیگەرانی ئەوە دەبیت کە خەڵک دوای ئەوەی بەرزت دەنرخێنن، لەلایەن تۆوە بێهیوا ببن؟',
+    'ئەو کارەت بەدڵە کە بەتەنها کار بکەیت',
+    'تۆ پێت وایە بیرکردنەوە لە پرسیارە فەلسەفییە کات بەفیڕۆدانە',
+    'تۆ زیاتر حەزت بە شوێنی قەرەباڵخە وەک لە شوێنی ئارام و بێدەنگ',
+    'ئەگەر بڕیارێک هەست بە دروستی بکەیت، زۆرجار بەبێ ئەوەی پێویستت بە بەڵگەی زیاتر بێت، جێبەجێی دەکەیت',
+    'زۆرجار هەست بە بێزاری دەکەیت',
+    'تۆ شتەکان بە شێوازێکی ڕێکوپێک تەواو دەکەیت بەبێ ئەوەی هیچ هەنگاوێک بپەڕێنیت.',
+    'ئایا حەزت لە دۆزینەوەی شتەکانە بە شێوەیەکی داهێنەرانە نەک هەنگاوی تایبەت پەیڕەو بکەیت؟',
+    'تۆ زیاتر پشت بە هەستی سۆزداری دەبەستیت وەک لە هۆکاری لۆژیکی کاتێک بڕیار دەدەیت',
+    'ئایا بەزەحمەت شتەکان لە کاتی خۆیدا تەواو دەکەیت؟',
+    'تۆ هەست بە دڵنیایی دەکەیت کە شتەکان بۆ تۆ باش بەڕێوەدەچن'
+        ];
+    
+        const container = document.getElementById('questions-container');
+        let selectedAnswers = {};
+    
+        if (originalQuestions.length !== translations.length) {
+            console.error('Mismatch between original questions and translations');
+        }
+    
+        originalQuestions.forEach((question, index) => {
+            if (!translations[index]) {
+                console.error('Missing translation for question index:', index);
+                return;
+            }
+    
+            const questionContainer = document.createElement('div');
+            questionContainer.classList.add('question-container');
+    
+            const questionElement = document.createElement('div');
+            questionElement.classList.add('question');
+            questionElement.textContent = translations[index];
+            questionContainer.appendChild(questionElement);
+    
+            const answersContainer = document.createElement('div');
+            answersContainer.classList.add('answers');
+    
+            const values = [-3, -2, -1, 0, 1, 2, 3];
+            const colors = ['green', 'green', 'green', 'grey', 'red', 'red', 'red'];
+            const heights = ['height-3', 'height-2', 'height-1', 'height-0-5', 'height-1', 'height-2', 'height-3'];
+            const labels = [
+                '', '', '', '', '', '', ''
+            ];
+    
+            values.forEach((value, i) => {
+                const button = document.createElement('button');
+                button.classList.add('answer-btn', colors[i], heights[i]);
+                button.setAttribute('data-question-index', index);
+                button.setAttribute('data-value', value);
+                button.textContent = value === 0 ? labels[i] : '';
+                button.onclick = function() { selectAnswer(this); };
+                answersContainer.appendChild(button);
+            });
+    
+            questionContainer.appendChild(answersContainer);
+    
+            const textUnderButtons = document.createElement('div');
+            textUnderButtons.classList.add('text-under-buttons');
+    
+            const agreeText = document.createElement('div');
+            agreeText.classList.add('agree');
+            agreeText.textContent = 'ڕازی بوون';
+    
+            const disagreeText = document.createElement('div');
+            disagreeText.classList.add('disagree');
+            disagreeText.textContent = 'رازی نەبوون';
+    
+            textUnderButtons.appendChild(agreeText);
+            textUnderButtons.appendChild(disagreeText);
+    
+            questionContainer.appendChild(textUnderButtons);
+            container.appendChild(questionContainer);
+        });
+    
+        function selectAnswer(button) {
+            const questionIndex = button.getAttribute('data-question-index');
+            const value = button.getAttribute('data-value');
+            
+            const previouslySelected = document.querySelector(`.answer-btn.selected[data-question-index="${questionIndex}"]`);
+            if (previouslySelected) {
+                previouslySelected.classList.remove('selected');
+            }
+    
+            button.classList.add('selected');
+            selectedAnswers[questionIndex] = value;
+        }
+    
+        function submitAnswer() {
+            const genderSelect = document.getElementById('gender');
+            const selectedGender = genderSelect.value;
+    
+            const payload = {
+                questions: originalQuestions.map((question, index) => ({
+                    text: question,
+                    answer: Number(selectedAnswers[index]) || null
+                })),
+                gender: selectedGender,
+                inviteCode: '',
+                teamInviteKey: null,
+                extraData: []
+            };
+    
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('modal-message').textContent = text;
+                
+                const fullViewButton = document.getElementById('full-view-btn');
+                fullViewButton.style.display = 'inline';
+                fullViewButton.onclick = function() {
+                    const url = `https://www.16personalities.com/${text}-personality`;
+                    window.location.href = url;
+                };
+    
+                document.getElementById('response-modal').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    
+
+        const modal = document.getElementById('response-modal');
+        const closeBtn = document.querySelector('.close-btn');
+    
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+    
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+    
+</body>
+</html>
